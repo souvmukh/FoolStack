@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Play Music</title>
+    
+    <style>
+        .button{
+            background-color: #5aac5d;
+            border: none;
+            color: white;
+            padding: 30px 48px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 8px 10px;
+            cursor: pointer;
+        }
+    </style>
+
+        <script type="text/javascript">     
+        function callAPI(objButton)
+        {   
+            fetch('http://127.0.0.1:5000/scaleoctave/'+ String(objButton.value))
+                .then(function(result){
+                    console.log(result)
+                })
+                .catch(function(err){
+                    console.log(err)
+                })
+        }   
+        </script>
+    </head>
+
+    <body style = 'background-color:rgb(243, 208, 208);'>
+        <h3>Play Music scale on screen by pressing on the green buttons. The button name contains scale & octave.</h3>
+        <div style='margin-top:24px'>
+            <button id = "c3" class="button" onclick="callAPI(this)" value="C3">  C3  </button>
+            <button id = "d3" class="button" onclick="callAPI(this)" value="D3">  D3  </button>
+            <button id = "e3" class="button" onclick="callAPI(this)" value="E3">  E3  </button>
+            <button id = "f3" class="button" onclick="callAPI(this)" value="F3">  F3  </button>
+            <button id = "g3" class="button" onclick="callAPI(this)" value="G3">  G3  </button>
+            <button id = "a3" class="button" onclick="callAPI(this)" value="A3">  A3  </button>
+            <button id = "b3" class="button" onclick="callAPI(this)" value="B3">  B3  </button>
+        </div>
+
+        <div style='margin-top:24px'>
+            <button id = "c4" class="button" onclick="callAPI(this)" value="C4">  C4  </button>
+            <button id = "d4" class="button" onclick="callAPI(this)" value="D4">  D4  </button>
+            <button id = "e4" class="button" onclick="callAPI(this)" value="E4">  E4  </button>
+            <button id = "f4" class="button" onclick="callAPI(this)" value="F4">  F4  </button>
+            <button id = "g4" class="button" onclick="callAPI(this)" value="G4">  G4  </button>
+            <button id = "a4" class="button" onclick="callAPI(this)" value="A4">  A4  </button>
+            <button id = "b4" class="button" onclick="callAPI(this)" value="B4">  B4  </button>
+        </div>
+
+        <div style='margin-top:24px'>
+            <button id = "c5" class="button" onclick="callAPI(this)" value="C5">  C5  </button>
+            <button id = "d5" class="button" onclick="callAPI(this)" value="D5">  D5  </button>
+            <button id = "e5" class="button" onclick="callAPI(this)" value="E5">  E5  </button>
+            <button id = "f5" class="button" onclick="callAPI(this)" value="F5">  F5  </button>
+            <button id = "g5" class="button" onclick="callAPI(this)" value="G5">  G5  </button>
+            <button id = "a5" class="button" onclick="callAPI(this)" value="A5">  A5  </button>
+            <button id = "b5" class="button" onclick="callAPI(this)" value="B5">  B5  </button>
+        </div>
+
+        <div style='margin-top:24px'>
+            <button id = "c6" class="button" onclick="callAPI(this)" value="C6">  C6  </button>
+            <button id = "d6" class="button" onclick="callAPI(this)" value="D6">  D6  </button>
+            <button id = "e6" class="button" onclick="callAPI(this)" value="E6">  E6  </button>
+            <button id = "f6" class="button" onclick="callAPI(this)" value="F6">  F6  </button>
+            <button id = "g6" class="button" onclick="callAPI(this)" value="G6">  G6  </button>
+            <button id = "a6" class="button" onclick="callAPI(this)" value="A6">  A6  </button>
+            <button id = "b6" class="button" onclick="callAPI(this)" value="B6">  B6  </button>
+        </div>
+
+    </body>
+
+</html>
