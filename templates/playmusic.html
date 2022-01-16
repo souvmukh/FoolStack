@@ -8,7 +8,7 @@
             background-color: #5aac5d;
             border: none;
             color: white;
-            padding: 30px 48px;
+            padding: 20px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -34,6 +34,10 @@
 
     <body style = 'background-color:rgb(243, 208, 208);'>
         <h3>Play Music scale on screen by pressing on the green buttons. The button name contains scale & octave.</h3>
+        <div>
+            <button id = "playback" class="button" onclick="callAPI(this)" value="playback">  PLAY BACK  </button>
+            <button id = "clear" class="button" onclick="callAPI(this)" value="clear">  CLEAR  </button>
+        </div>
         <div style='margin-top:24px'>
             <button id = "c3" class="button" onclick="callAPI(this)" value="C3">  C3  </button>
             <button id = "d3" class="button" onclick="callAPI(this)" value="D3">  D3  </button>

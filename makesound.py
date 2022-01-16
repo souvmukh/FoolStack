@@ -5,13 +5,16 @@ from time import sleep
 
 class MakeSound():
     
-    def __init__(self,scale = "C8"):
-
-        self.freq = soundofmusic[scale]
-        print(scale + ' : ' + str(self.freq))
-        print("**************************************************************************")
+    def __init__(self):
+        pass
     
-    def getSound(self, duration = 750):
-        sleep(0.5)
-        winsound.Beep(int(self.freq + 0.5), duration)
+    def oneNote(self,note="C8", duration=750):
+        self.freq = soundofmusic[note]
+        self.duration = duration
+        print(note + ' : ' + str(self.freq))
+        print("**************************************************************************")
+        return self.getSound()
+    
+    def getSound(self):
+        winsound.Beep(int(self.freq + 0.5), self.duration)
         return self.freq
