@@ -2,6 +2,8 @@ from flask import Flask,render_template,jsonify,request
 from flask_restful import Resource, Api
 from makesound import MakeSound
 
+#1. To Save your Sound 2. Exception Handling API
+
 app = Flask(__name__)
 api = Api(app)
 
